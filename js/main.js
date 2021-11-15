@@ -16,18 +16,18 @@ const app = new Vue ({
     el: '#app',
     data: {
         todos: [
-            {
-                text: 'Terminare esercizio di oggi',
-                completed: false,
-            },
-            {
-                text: 'Portare fuori il cane',
-                completed: false,
-            },
-            {
-                text: 'Lavare i piatti',
-                completed: true,
-            },
+            // {
+            //     text: '',
+            //     completed: false,
+            // },
+            // {
+            //     text: '',
+            //     completed: false,
+            // },
+            // {
+            //     text: '',
+            //     completed: false,
+            // },
         ],
         // devo collegare il mio input al tasto aggiungi per creare ed inserire nuovi todo
         newTodo: '',
