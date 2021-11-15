@@ -47,14 +47,28 @@ const app = new Vue ({
                 this.$refs.InputFocus.focus();
             }
         },
+
         // rimozione todo dalla lista
-        removeTodo (indexToDo) {
+        removeTodo(indexToDo) {
             console.log(indexToDo);
 
             // creo una costante per definire quale precisamente eliminare dalla lista
             // splice mi da l opportunita di togliere un elemento e definre quanti elementi eliminare
             const deleted = this.todos.splice(indexToDo, 1);
             console.log(deleted);
+        },
+
+        // definte uno status di un todo: true o false
+        statusToDo(indexToDo) {
+            console.log(indexToDo);
+
+            // creo una deciosne per dirfli se e vero o falsa
+            // utilizzo questo metodo perche mi e piu facile con il ragionamento
+            if (this.todos[indexToDo].completed) {
+                this.todos[indexToDo].completed = false;
+            } else {
+                this.todos[indexToDo].completed = true;
+            }
         },
     }
 });
