@@ -11,6 +11,7 @@
     z-index: 1;
 }
 
+/* header */
 .app-header {
     justify-content: center;
 }
@@ -41,6 +42,9 @@
 .new-todo input:focus {
     border-color: black;
 }
+
+
+/* main */
 
 .list-main {
     margin: 40px 0;
@@ -96,6 +100,24 @@
 
 .todo .text.completed::before {
     background: black;
+}
+
+.list-main .new-todo .title-check {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 20px;
+}
+.list-main .new-todo .new-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-main .new-todo .new-img img {
+    max-width: 300px;
+    margin-top: 20px;
+    box-shadow: 0 15px 10px -10px rgba(0,0,0, .8);
 }
 
 .waves {
