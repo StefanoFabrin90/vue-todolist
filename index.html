@@ -21,15 +21,15 @@
     <div id="app" class="container">
         <header class="row app-header d-flex">
             <div class="col-6 d-flex">
-                <img src="https://www.ancescao.it/images/00-Documenti/list-2389219_960_720.png" alt="logo-checklist">
                 <h1 class="title">Checklist</h1>
+                <img src="https://www.ancescao.it/images/00-Documenti/list-2389219_960_720.png" alt="logo-checklist">
             </div>
         </header>
 
         <section class="new-todo d-flex">
             <input 
                 type="text" 
-                placeholder="Inserisci nuovo todo"
+                placeholder="Inserisci nuovo 'To Do'"
                 v-model.trim="newTodo"
                 @keyup.enter="addTodo"
                 ref="InputFocus"
@@ -65,9 +65,9 @@
             <!-- aggiungo un text per dire all utente che non ha creato nessun todo,
             lo mostro solo quanod la lista e vuota e lo paragono alla lunghezza del mio array-->
             <div class="new-todo" v-else>
-                <h2 class="title-check" >Non sono presenti check da fare: Inserisci un nuovo ToDo</h2>
+                <h2 class="title-check mx-5" >Non sono presenti check da fare: Inserisci un nuovo 'To Do'</h2>
                 <div class="new-img d-flex">
-                    <img src="https://lh3.googleusercontent.com/proxy/B4hCuVlUbEH4McjHygr1CQTjKP0b3R7YGHGSlTT6cz4P7fjnLARR5e4MOHX5LYpnKedM6HGtaHJ7Wz30I9vOttUQhzP4aEgbHIi0X5OGBnULx9-peUUzlUHQsHqJrIDelAmDY8ZR28Cf4mcU_hE" alt="newtodo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiUmVJw1Qlv1X28SkHZBOE78vZhCz02qid8fehGw-zZYwByhYmr6tGdgXBIpedV74Lh_E&usqp=CAU" alt="newtodo">
                 </div>
             </div>
             
