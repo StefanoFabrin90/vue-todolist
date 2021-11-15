@@ -33,14 +33,28 @@ const app = new Vue ({
         newTodo: '',
     },
     methods: {
+        // aggiunta nuovo todo alla lista
         addTodo () {
             if (this.newTodo !== '') {
                 this.todos.unshift({
                     text: this.newTodo,
-                    completed: true,
+                    completed: false,
                 });
+                // pulisco l input per inserine uno nuovo
                 this.newTodo = ''
+
+                // creo il focus per poter continuare ad inserire TODO velocemnete senza dover sempre andare a sciacciare l input
+                this.$refs.InputFocus.focus();
             }
-        }
+        },
+        // rimozione todo dalla lista
+        removeTodo (indexToDo) {
+            console.log(indexToDo);
+
+            // creo una costante per definire quale precisamente eliminare dalla lista
+            // splice mi da l opportunita di togliere un elemento e definre quanti elementi eliminare
+            const deleted = this.todos.splice(indexToDo, 1);
+            console.log(deleted);
+        },
     }
 });

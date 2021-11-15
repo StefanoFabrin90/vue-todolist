@@ -32,6 +32,7 @@
                 placeholder="Inserisci nuovo todo"
                 v-model.trim="newTodo"
                 @keyup.enter="addTodo"
+                ref="InputFocus"
             >
             <button 
                 type="button" 
@@ -44,7 +45,7 @@
 
         <main class="list-main">
             <ul class="list-todo">
-                <li class="todo" v-for="element in todos">
+                <li class="todo" v-for="(element, index) in todos">
                     <span 
                         class="text"
                         :class="{completed: element.completed}"
@@ -54,7 +55,7 @@
                     <button 
                         type="button" 
                         class="btn btn-danger btn-delete"
-                        @click="addTodo"
+                        @click="removeTodo(index)"
                     >
                             Delete
                     </button>
