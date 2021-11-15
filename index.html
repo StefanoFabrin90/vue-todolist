@@ -44,8 +44,16 @@
         </section>
 
         <main class="list-main">
+            <a 
+                class="filtro"
+                href="#"
+                @click.prevent="addFiltro"
+            >
+                Mostra solo 'To Do' da completare
+            </a>
             <ul class="list-todo" v-if="todos.length > 0">
-                <li class="todo" v-for="(element, index) in todos">
+                <li class="todo" v-for="(element, index) in todos"
+                v-show="filterActive === false || filterActive === true && element.completed === false">
                     <span 
                         class="text"
                         :class="{completed: element.completed}"

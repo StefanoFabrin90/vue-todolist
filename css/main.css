@@ -127,3 +127,10 @@
     left: 0;
     bottom: 0;
 }
+
+.filtro {
+    display: block;
+    margin-bottom: 30px;
+    color: #40b7ad;
+    font-size: 14px;
+}

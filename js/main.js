@@ -17,20 +17,21 @@ const app = new Vue ({
     data: {
         todos: [
             // {
-            //     text: '',
+            //     text: 'test 1',
             //     completed: false,
             // },
             // {
-            //     text: '',
+            //     text: 'test 2',
             //     completed: false,
             // },
             // {
-            //     text: '',
-            //     completed: false,
+            //     text: 'test 3',
+            //     completed: true,
             // },
         ],
         // devo collegare il mio input al tasto aggiungi per creare ed inserire nuovi todo
         newTodo: '',
+        filterActive: false,
     },
     methods: {
         // aggiunta nuovo todo alla lista
@@ -70,5 +71,11 @@ const app = new Vue ({
                 this.todos[indexToDo].completed = true;
             }
         },
+
+        // bonus, con l aiutom del video perche mi sono perso in vari punti
+        addFiltro () {
+            console.log('test');
+            this.filterActive = !this.filterActive;
+        }
     }
 });
