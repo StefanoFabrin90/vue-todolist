@@ -17,8 +17,45 @@
 </head>
 <body>
     
+    <!-- Vue -->
+    <div id="app" class="container">
+        <header class="row app-header d-flex">
+            <div class="col-6 d-flex">
+                <img src="https://www.ancescao.it/images/00-Documenti/list-2389219_960_720.png" alt="logo-checklist">
+                <h1 class="title">Checklist</h1>
+            </div>
+        </header>
 
-    <h1>test</h1>
+        <section class="new-todo d-flex">
+            <input type="text" placeholder="Inserisci nuovo todo">
+            <button type="button" class="btn btn-primary button mx-3">Aggiungi</button>
+        </section>
+
+        <main class="list-main">
+            <ul class="list-todo">
+                <!-- <li class="todo">
+                    <span class="text">testo del mio todo</span>
+                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
+                </li>
+                <li class="todo">
+                    <span class="text completed">testo del mio todo</span>
+                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
+                </li>
+                <li class="todo">
+                    <span class="text">testo del mio todo</span>
+                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
+                </li> -->
+                <li class="todo" v-for="element in todos">
+                    <span class="text">{{ element.text }}</span>
+                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <svg  class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#40b7ad" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,170.7C384,160,480,96,576,80C672,64,768,96,864,112C960,128,1056,128,1152,117.3C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+    
 
 
 
