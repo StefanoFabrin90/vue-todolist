@@ -27,27 +27,37 @@
         </header>
 
         <section class="new-todo d-flex">
-            <input type="text" placeholder="Inserisci nuovo todo">
-            <button type="button" class="btn btn-primary button mx-3">Aggiungi</button>
+            <input 
+                type="text" 
+                placeholder="Inserisci nuovo todo"
+                v-model.trim="newTodo"
+                @keyup.enter="addTodo"
+            >
+            <button 
+                type="button" 
+                class="btn btn-primary button mx-3"
+                @click="addTodo"
+            >
+                    Aggiungi
+            </button>
         </section>
 
         <main class="list-main">
             <ul class="list-todo">
-                <!-- <li class="todo">
-                    <span class="text">testo del mio todo</span>
-                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
-                </li>
-                <li class="todo">
-                    <span class="text completed">testo del mio todo</span>
-                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
-                </li>
-                <li class="todo">
-                    <span class="text">testo del mio todo</span>
-                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
-                </li> -->
                 <li class="todo" v-for="element in todos">
-                    <span class="text">{{ element.text }}</span>
-                    <button type="button" class="btn btn-danger btn-delete">Delete</button>
+                    <span 
+                        class="text"
+                        :class="{completed: element.completed}"
+                    >
+                            {{ element.text }}
+                    </span>
+                    <button 
+                        type="button" 
+                        class="btn btn-danger btn-delete"
+                        @click="addTodo"
+                    >
+                            Delete
+                    </button>
                 </li>
             </ul>
         </main>
